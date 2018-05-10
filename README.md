@@ -1,2 +1,2 @@
 # ReactD3
-reactJS and D3 interactive charts
+Bootstrapped reactJS project with a simple D3 bar chart.
