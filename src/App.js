@@ -1,20 +1,18 @@
-import React, { Component } from 'react';
-import './App.css';
-import BarChart from './BarChart'
+import React from 'react'
+import './App.css'
+//import {json} from 'd3-fetch'
+import Chart from './components/Chart'
+import StatLine from './components/StatLine'
+import data from './data.json'
+//var url = "lamp.istyles.net/~istyles6/data.json";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className='App-header'>
-          <h2>dashboard</h2>
-        </div>
-        <div>
-          <BarChart data={[5, 10, 1, 3]} size={[500,500]}/>
-        </div>
-      </div>
-    )
-  }
-}
-
-export default App
+export default () =>
+  <div className="App">
+    <div className="App-header">
+      <h2>Site Visitors Dashboard</h2>
+    </div>
+    <div className="App-chart-container">
+    <StatLine data={data} />
+      <Chart />
+    </div>
+  </div>
